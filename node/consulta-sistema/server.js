@@ -9,18 +9,18 @@ const PORT = process.env.PORT || 3000;
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
     host: 'localhost',
-    user: '*****',
-    password: '******',
+    user: 'CIPHER',
+    password: 'D1598753m@',
     database: 'querys_db'
 });
 
 // Conexão com o banco de dados
 db.connect((err) => {
     if (err) {
-        console.error('Erro ao conectar ao banco de dados:', err);
+        console.error('Error connecting to database:', err);
         return;
     }
-    console.log('Conectado ao banco de dados MySQL.');
+    console.log('Connected to MySQL database.');
 });
 
 // Middleware para servir arquivos estáticos da pasta "public"
@@ -39,8 +39,8 @@ app.get('/consulta', (req, res) => {
 
     db.query(query, (err, results) => {
         if (err) {
-            console.error('Erro ao realizar a consulta:', err);
-            res.status(500).send('Erro ao realizar a consulta.');
+            console.error('Error performing query:', err);
+            res.status(500).send('Error performing query.');
         } else {
             res.json(results);
         }
@@ -54,8 +54,8 @@ app.post('/login', (req, res) => {
     const query = 'SELECT * FROM users WHERE username = ?';
     db.query(query, [username], (err, results) => {
         if (err) {
-            console.error('Erro ao realizar a consulta:', err);
-            res.status(500).send('Erro ao realizar a consulta.');
+            console.error('Error performing query:', err);
+            res.status(500).send('Error performing query.');
         } else {
             if (results.length > 0) {
                 const user = results[0];
@@ -65,11 +65,11 @@ app.post('/login', (req, res) => {
                     if (isMatch) {
                         res.redirect('/painel.html'); // Redireciona para o painel
                     } else {
-                        res.send('Username ou senha incorretos!');
+                        res.send('Incorrect username or password!');
                     }
                 });
             } else {
-                res.send('Username não encontrado!');
+                res.send('Username not found!');
             }
         }
     });
@@ -85,10 +85,10 @@ app.post('/register', (req, res) => {
       const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
       db.query(query, [username, hash], (err, result) => {
           if (err) {
-              console.error('Erro ao registrar usuário:', err);
-              res.status(500).send('Erro ao registrar usuário.');
+              console.error('Error registering user:', err);
+              res.status(500).send('Error registering user.');
           } else {
-              res.send('Usuário registrado com sucesso!');
+              res.send('User registered successfully!');
           }
       });
   });
@@ -102,5 +102,5 @@ app.get("/logout", (freq, res) => {
 
 // Iniciando o servidor
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
