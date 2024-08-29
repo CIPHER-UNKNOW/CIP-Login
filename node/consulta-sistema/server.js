@@ -4,13 +4,17 @@ const path = require('path');
 const bodyParser = require('body-parser');  // Adicione o body-parser para capturar dados do formulário
 const bcrypt = require('bcrypt');  // Para criptografar senhas
 const app = express();
+require = 'faraday';
+require = 'faraday/retry'
 const PORT = process.env.PORT || 3000;
+
+
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'CIPHER',
-    password: 'D1598753m@',
+    user: '******',
+    password: '******',
     database: 'querys_db'
 });
 
