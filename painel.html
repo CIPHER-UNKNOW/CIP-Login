@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Consulta</title>
+    <link rel="stylesheet" href="./css/painel.css">
+    <script defer src="./js/painel.js"></script>
+</head>
+
+<body class="dark-theme">
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-content">
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button> <!-- Botão para abrir/fechar o menu -->
+            <h1>Painel de Consulta</h1>
+            <a href="/logout">
+            <button class="logout-btn">Logout</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Botão de Fechamento -->
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Consulta</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Preços e Planos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+        <!-- Campo de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Digite para buscar..." class="search-input">
+            <button class="search-btn">Buscar</button>
+        </div>
+
+        <!-- Tabela de Resultados -->
+        <section class="results-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Email</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Placa do Carro</th>
+                        <th>Endereço</th>
+                        <th>Data de Nascimento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Os resultados da pesquisa serão adicionados aqui dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção de Preços e Planos -->
+        <section class="pricing-section">
+            <h2>Planos de Consulta</h2>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h3>Plano Básico</h3>
+                    <p>Consulta por Nome, Idade e Email.</p>
+                    <p><strong>R$ 19,99</strong> por consulta</p>
+                    <button class="pricing-btn">Contratar</button>
+                </div>
+                <div class="card">
+                    <h3>Plano Intermediário</h3>
+                    <p>Inclui Nome, Idade, Email, CPF/CNPJ e Placa do Carro.</p>
+                    <p><strong>R$ 49,99</strong> por consulta</p>
+                    <button class="pricing-btn">Contratar</button>
+                </div>
+                <div class="card">
+                    <h3>Plano Avançado</h3>
+                    <p>Consulta completa com todas as informações.</p>
+                    <p><strong>R$ 89,99</strong> por consulta</p>
+                    <button class="pricing-btn">Contratar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 CIP-SEC. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

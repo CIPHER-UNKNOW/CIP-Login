@@ -1,0 +1,100 @@
+/* Estilos Gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background: #2c3e50; /* Fundo padrão para modo "dark" */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Estilo da Caixa de Login */
+.auth-form {
+    background-color: #3b3f4f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Limita o tamanho máximo */
+}
+
+.auth-form-header {
+    margin-bottom: 20px;
+}
+
+.auth-form-header h1 {
+    font-size: 24px;
+    font-family: 'NovaSquare', sans-serif; /* Fonte personalizada */
+    margin: 20px 0;
+}
+
+@font-face {
+    font-family: 'NovaSquare';
+    src: url(../fonts/NovaSquare.ttf);
+}
+
+/* Estilo da Imagem de Avatar */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Estilos dos Campos de Entrada */
+.auth-form-body label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.form-control:focus {
+    outline: 2px solid #4ca1af;
+}
+
+/* Estilo do Botão de Login */
+.btn-primary {
+    background-color: #4ca1af;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #3b8c99;
+}
+
+

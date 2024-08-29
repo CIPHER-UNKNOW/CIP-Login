@@ -1,0 +1,40 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="CIP-SEC" content="CIPHER-UNKNOW" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Register - CIP-SEC</title>
+</head>
+
+<body class="dark-theme">
+    <main class="container">
+        <div class="auth-form">
+            <div class="auth-form-header">
+                <a href="/index.html">
+                    <img src="./image/avatar-login.jpg" alt="Sec-Avatar" class="avatar">
+                </a>
+                <h1>Register to CIP-SEC</h1>
+            </div>
+
+            <div class="auth-form-body">
+                <form action="/register" method="POST"> <!-- Altere para POST -->
+                    <label for="reg_username">Username</label>
+                    <input type="text" id="reg_username" name="username" class="form-control" placeholder="Username" required>
+
+                    <label for="reg_password">Password</label>
+                    <input type="password" id="reg_password" name="password" class="form-control" placeholder="Password" required>
+                    
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                <!-- Link para voltar ao login -->
+                <p>Already have an account? <a href="/login.html">Sign in</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

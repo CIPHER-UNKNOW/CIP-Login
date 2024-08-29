@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    /* Estilo hacker */
+    background-color: #121212;
+    /* Fundo escuro */
+    color: #ecf0f1;
+    /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+    /* Gradiente cinza escuro */
+    padding: 15px;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* CSS para o painel */
+.sidebar {
+    width: 250px;
+    background-color: #1c1c1c;
+    position: fixed;
+    left: -250px;
+    /* Posição inicial fora da tela */
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    /* Espaço para o cabeçalho */
+}
+
+.sidebar.active {
+    left: 0;
+    /* Mostra a barra lateral */
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 0;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #333;
+    /* Efeito hover */
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s;
+    /* Animação suave */
+}
+
+.main-content.shifted {
+    margin-left: 220px;
+    /* Ajusta quando a sidebar está ativa */
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: #1e1e1e;
+    /* Estilo dark */
+    color: #ecf0f1;
+}
+
+.search-btn {
+    padding: 10px;
+    background-color: #3d9970;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #2e8b57;
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    /* Fundo da tabela */
+    color: #ecf0f1;
+}
+
+.results-table th,
+.results-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    /* Borda escura */
+}
+
+.results-table th {
+    background-color: #2c2c2c;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #1f618d;
+}
+
+.pricing-section {
+    margin-top: 40px;
+    color: #ecf0f1;
+}
+
+.pricing-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Efeito de hover */
+}
+
+.pricing-btn {
+    background-color: #3d9970;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-btn:hover {
+    background-color: #2e8b57;
+}
+
+.footer {
+    background-color: #1e1e1e;
+    padding: 10px;
+    text-align: center;
+    color: #ecf0f1;
+    margin-top: auto;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

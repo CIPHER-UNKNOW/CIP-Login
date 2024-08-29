@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Estilo do header */
+header {
+    background: #1f1f1f;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* Estilo da seção intro */
+.intro {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.intro-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.intro-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: #ff7e5f;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #feb47b;
+}
+
+/* Estilo das seções */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1f1f1f;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff7e5f;
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.section ul {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Gradiente de fundo para algumas seções */
+.bg-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+}
+
+/* Estilo do footer */
+footer {
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .intro-content h2 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.8em;
+    }
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1f1f1f;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
